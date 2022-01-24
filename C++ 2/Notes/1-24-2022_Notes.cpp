@@ -19,6 +19,18 @@ class Student{    // tells me what a student is
 
 int main()(
   
+    /*
+vector<string> names = {"Samuel Samuelson", Yousef Yousefson", "Phil Cole"};
+vector<double> gpa = {1.0, 2.0, 4.0};
+vector string = major = {"Biology", "CpE", "EE"}  // we can put these into objects and classes :"
+
+    for(int i = 0; i < 3 ; i++) {
+        cout << names[i] << endl;
+        cout << gpa[i] << endl;
+    }
+    
+    */
+  
   Student s1;
   s1.name = "Sam Shue";
   s1.gpa = 1.5;
@@ -41,18 +53,6 @@ int main()(
 
   // when you declare a variable inside a class, they are private variables so only the class can call on the,
   // they can be declared as public and anything that follows the word "public" will allow those variables to become priate
-  
-  /*
-vector<string> names = {"Samuel Samuelson", Yousef Yousefson", "Phil Cole"};
-vector<double> gpa = {1.0, 2.0, 4.0};
-    // vector string = major = {"Biology", "CpE", "EE"}  // we can put these into objects and classes :"
-
-    for(int i = 0; i < 3 ; i++) {
-        cout << names[i] << endl;
-        cout << gpa[i] << endl;
-    }
-    
-    */
 
 return 0;
 
