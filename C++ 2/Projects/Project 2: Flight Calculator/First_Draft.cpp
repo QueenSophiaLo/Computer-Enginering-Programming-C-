@@ -16,21 +16,24 @@ class Location {
     vector<string> country = {"USA", "USA", "USA", "USA", "USA", "USA", "USA", "USA", "USA", "USA"};
     vector<double> latitude = { 41.121880, 41.681408, 41.562794, 26.687412, 27.891005, 39.370121, 31.594915, 39.741550, 43.828850, 25.750156};
     vector<double> longitude = {-73.436432, -72.794746, -72.681610, -80.681831, -81.847359, -74.438942, -84.224236, -90.256218, -115.837860, -80.279640};
-    private:
 };
 
 // The program will begin by greeting the user with a quick description of the application’s function
 void programDescription() {
-    cout << FIXME << endl;
+    cout << "FIXME" << endl;
 }
 
 // This function presents the user with an enumerated list of options 
 // (locations with GPS coordinates in latitude and longitude formation)
 void enumList() {
-    for (FIXME) { // create a for loop that goes through the values and outputs them
-        cout << FIXME << endl;
+    for (int i = 0; i <= 10; ++i) { // create a for loop that goes through the values and outputs them
+        cout << "  -City/State/Country Name-   -Latitude-   -Longitude-" << endl;
+        cout << i+1 << ".     " << (Location.at(i)).cityName << ", " << (Location.at(i)).stateName << ", " << (Location.at(i)).country;
+        cout << "     " << (Location.at(i)).latitude << (Location.at(i)).longitude << endl;
     }
 }
+
+/*
 
 // This function prompts the user to select a departure location
 void selectDepLoca() {
@@ -49,7 +52,7 @@ void enumListNoDest() {
 // This will require us to use the Haversine formula to calculate distance across the surface of the sphere
 // The Haversine formula (Links to an external site.) appears as follows...
 
-double haversine() {        // compute distance to departure location selected by user
+double haversine(double lat1, double long1, double lat2, double long2, double radius) {        // compute distance to departure location selected by user
                             // compute distance to destination location selected by user
     // distance between latitude and longitude
 
@@ -58,8 +61,10 @@ double d; // distance between two points
 double r; // radius of the sphere
 double lat1; // latitude of point 1
 double lat2; // lattitude of point 2
-double lon1; // longitude of point 1
-double lon2; // longitude of point 2
+double long1; // longitude of point 1
+double long2; // longitude of point 2
+
+return d; // The value being returned is the haversine distance in miles between the two latitude/longitude points passed to the function (lat1/long1, lat2,long2).
 }
 
 // Once you have computed the distance between the two points
@@ -69,7 +74,10 @@ double lon2; // longitude of point 2
 
 // calculate the approximate time to fly between the two selected points. 
 
+double getFlightTime(double lat1, double long1, double lat2, double long2);
 
+
+*/
 
 int main() {
 
@@ -78,6 +86,9 @@ int main() {
 // λ1, λ2 are the longitude of point 1 and longitude of point 2.
 // r is the radius of the sphere
 // d is the distance between the two points
+
+cout << programDescription() << endl;   // output program synopsis 
+cout << enumList << endl;
 
 
 
