@@ -3,6 +3,7 @@
 #include <vector>
 #include <stdlib.h>
 #include "math.h"
+#include <cmath>
 
 using namespace std;
 
@@ -48,10 +49,40 @@ void enumListNoDest() {
 // This will require us to use the Haversine formula to calculate distance across the surface of the sphere
 // The Haversine formula (Links to an external site.) appears as follows...
 
-int departureDist() {        // compute distance to departure location selected by user
+double haversine() {        // compute distance to departure location selected by user
+                            // compute distance to destination location selected by user
+    // distance between latitude and longitude
+
     
+double d; // distance between two points
+double r; // radius of the sphere
+double lat1; // latitude of point 1
+double lat2; // lattitude of point 2
+double lon1; // longitude of point 1
+double lon2; // longitude of point 2
 }
 
-int destinationDist() {        // compute distance to destination location selected by user
-    
+// Once you have computed the distance between the two points
+// approximate the speed of the plane to find the average flight time to get between the two points
+// The average passenger jet flies at a speed of somewhere between around 460-575 mph
+// Choose a value in this range to represent the speed of the jet
+
+// calculate the approximate time to fly between the two selected points. 
+
+
+
+int main() {
+
+// variables...
+// φ1, φ2 are the latitude of point 1 and latitude of point 2,
+// λ1, λ2 are the longitude of point 1 and longitude of point 2.
+// r is the radius of the sphere
+// d is the distance between the two points
+
+
+
+
+return 0;
 }
+
+
