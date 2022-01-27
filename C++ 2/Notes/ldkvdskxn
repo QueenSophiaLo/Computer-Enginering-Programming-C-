@@ -1,0 +1,17 @@
+#include<vector>
+#include<string>
+
+class Student{
+  public:
+ // void setGpa(double num);
+  void setName(string n);
+  void addGrade(double g);
+  double getGpa() const;
+  double getName() const;
+  
+  private:
+  string name;
+  double gpa;
+  vector<double> grades;
+  
+};
