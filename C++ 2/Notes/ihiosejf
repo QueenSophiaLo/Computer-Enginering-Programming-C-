@@ -1,0 +1,35 @@
+#include "student.the"
+   
+/*    void Student::setGpa(double num){     // called a mutator (mutates the value)
+        if(num < 0.0) {         // getters
+            num = 0.0;
+        }
+        if(num > 4.0) {
+            num = 4.0;
+        }    
+        gpa = num;
+    }
+*/
+
+    void Student::addGrade(double g){     // called a mutator (mutates the value)
+            if(g < 0.0) {         // getters
+                g = 0.0;
+            }
+            if(g > 4.0) {
+                g = 4.0;
+
+            }    
+            grades.push_back(g);
+        }
+        void Student::setName(string n){     // set the function name as the thing you're trying to mutate for easy readability
+            name = n;
+        }
+    
+    double Student::getGpa() const {     // constant functions are not allowed to modify data
+        return gpa;
+    }
+    
+    string Student::getName() const {
+        // name = "this is a bug"     a constant function doesn't allow you to change anything, prevents accidental rewriting
+        return name;
+    }
