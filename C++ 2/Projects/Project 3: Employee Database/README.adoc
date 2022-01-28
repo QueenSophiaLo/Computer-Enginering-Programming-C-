@@ -1,0 +1,42 @@
+Overview
+
+In this project you will be creating an application to track information about employees at a company. This application will track employee's names, job titles, and wages. This application will also be used to calculate the total amount of wages that employees are to be paid for the week.
+Required Materials
+
+    Laptop with Internet Connection
+    AWS Account with Cloud9 instance configured
+
+Description
+
+The program will begin by greeting the user with a quick description of the application's function and then presenting the user with several options:
+
+    Print list of employees
+    Calculate total wages
+    Add new employee
+    Exit application
+
+The user will select one of these options by entering the option's enumerated value (i.e., enter 3 to add a new employee).
+
+The "Print list of employees" should print each employee name, job title, and associated hourly wages. 
+
+The "Calculate total wages" option will iterate through each employee and ask the user to input the total number of hours worked for the that employee, multiplying that by the employee's hourly wages, and adding that to the total. After iterating through all employees, the total wages for that week should be displayed. 
+
+The "Add new employee" option will prompt the user to provide a name, job title, and hourly rate. This employee will then be added to the database of employees.
+
+The "Exit application" will break the application out of its main loop and exit the program.
+Requirements
+
+    The code should be well formatted with proper indentation, variable names, and function structure.
+    The code should be robust to faulty user inputs, which should not cause the program to crash.
+    An Employee class should be created to hold the employee's name, job title, and hourly wage.
+        The member variables of this class should be kept private, with public accessors and mutators implemented to interact the associated information (e.g., void setWages(double wages); should be defined to set the value of the employee's wages variable. Similarly, double getWages(); should retrive that value.)
+        The mutators for setting the wages value should prevent the user from entering in faulty information, such as negative numbers.
+    The program should behave according to the description provided in the "Description" section.
+
+Notes and Tips
+
+    Use a vector to store the current list of employees.
+
+How to Submit
+
+To submit your assignment, upload your source files and executable here. To download your files, right click the file name from the directory menu on the left side of the Cloud9 interface and select download. 
