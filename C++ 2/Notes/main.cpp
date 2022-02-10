@@ -14,7 +14,7 @@ int main(){
 	int x = 5;
 	int* p = &x;
 	p = (int*)5;		// to be able to do the above funtions
-	cout << p << endl;
+	cout << p << endl;	// 0x5o
 	
 	int x = 5;
 	int y = 10;
@@ -27,11 +27,11 @@ int main(){
 	long long int y = 10;
 	long long int* px = (long long int*)&x;
 	long long int* py = (long long int*)&y;
-	cout << px << endl;
-	cout << py << endl;
+	cout << px << endl;	// 0x7ffc3e8a09b8
+	cout << py << endl;	// 0x7ffc3e8a09c0
 
 	return 0;
 }
 
-0x7ffc3e8a09b8
-0x7ffc3e8a09c0
+
+
