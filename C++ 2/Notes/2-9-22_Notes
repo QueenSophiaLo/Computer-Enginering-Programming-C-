@@ -1,0 +1,41 @@
+POINTERS
+a special type of variable that "points" to another variable
+a pointer accomplishes that by storing the address to another variable
+each variable has an adress associated with it
+
+MEMORY AND ADDRESSES
+represented by a large block, divided into many seperate regions based on their functions
+text- where the program is stored
+data and BSS - where global variables are stored
+stack - where variables declared within functions are stored
+(There are more regions but these are the important ones for now)
+
+STACK
+memory is divided into 8-bit sections, each given a number to represent location
+this number is the address of that location in memory
+these address are represented with 64-bit hex numbers
+
+MEMORY AND ADDRESSES
+	int main(){ // x goes into the memory address 
+	int x=5;}
+when we declare a new variable inside the function, this variable gets stored inside the stack
+the location on the stack is automatically assigned (hence automatic variable)
+stack starts at a higher address and fills in to lower addresses
+"5" took up 4 8-bit locations
+
+these variables get automatically popped on and off the stack as they appear in function calls
+
+POINTER SYNTAX
+int*p; // pointer declaration, indicated that this variable hold the address to an int
+
+int x = 5;
+int* p = &x; // pulls the value of the variable out and assigns it to p (NOT PASSBY REFERENCE!!)
+
+1) space for "p" is made on the stack
+2) the address of "x" gets extracted and assigned to "p"
+3) "p" is now pointing to "x"
+
+int x = 5;
+int* p = &x; // points to x
+*p = 10 + *p; // adds 10 and writes it back to the variable "p" points to
+cout << x << endl; // outputs 15... adding 5 to 10 then it writes 15 to x
