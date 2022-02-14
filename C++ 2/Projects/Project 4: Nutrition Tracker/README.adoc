@@ -1,0 +1,49 @@
+Overview
+
+In this project you will be creating an application to track a person's nutritional intake for the day.
+Required Materials
+
+    Laptop with Internet Connection
+    AWS Account with Cloud9 instance configured
+
+Description
+
+The program should prompt the user to choose a food item from a list of options. The program should continue looping until the user enters the option to stop. At that time the total nutritional value of all of the food items selected should be combined and displayed. You may present the list of options as enumerated items with a description. For example,
+
+1: Apple
+2: French Fries
+3: Burger
+4: Instant Ramen
+5: Protein Bar
+....
+11: Finished
+
+Once the user has finished selecting items, they should enter the item number associated with "Finished". The program should then display the total nutritional value of all the selected items and display some statistics to the user.
+Requirements
+
+    The code should be well formatted with proper indentation, variable names, and function structure.
+    You should create a class to contain a "Food Item". This food item class should track the name of the food, calories, total fat, total sugars, protein, and sodium. The class's member variables should only be accessible via public accessors or mutators, if necessary. It should contain no public member variables. 
+    Override the addition operator to allow food items to be added together. The result of the addition should populate a class containing the combined nutritional value of the two items. Use this operator to sum up the nutritional value of all the food items selected by the user.
+    The program should loop and continuously add new items into a total value represented by an instance of the "Food Item" class representing the day's total nutritional intake. The program should display at least 10 pre-populated items for the user to choose from. The program should also offer an option for the user to enter when they have completed selecting the foods consumed for the day.
+    After all food entries have been entered into the console and the total nutritional value has been computed, display to the user if they have exceeded any of the recommended intakes for an average adult:
+
+        Energy: Approximately 2,000 cal.
+        Total fat: less than 70g.
+        Total sugars: less than 30g.
+        Protein: Approximately 50g.
+        Sodium: less than 2,300 mg.
+    Add an option for the user to enter a custom item in the list of food options. The user should be prompted to enter values for each of the item's nutrients and provide a name. This option should then show up in the list as a selectable option on the next cycle of the loop.
+    Be sure to separate your class into a separate .h and .cpp files. Your .h file should include an "include guard".
+
+How to Submit
+
+Upload your source files (.cpp, .h) here when completed. Also upload your compiled executable file (if your code compiles). 
+Program Demo
+
+The file below is a compiled executable for Cloud9 that demonstrates *most* of the functionality of this project description. Note that this is not a full implementation of the above described requirements, and you are responsible for everything in the rubric here, not just replicating what this demo performs. This is something that I produced to aid in understanding the project description.  Be sure to modify this file when you import it to your cloud9 environment by using "sudo chmod 777 exam_1_demo" in order to be able to run the file.
+
+NOTE: This was previously an exam question, demoted to project assignment. Don't let the file name freak you out.
+
+exam_1_demo Download exam_1_demo   
+
+NOTE: I am a PhD not an MD. Do not actually take any nutritional values from this exam question seriously. I am not responsible for your diet or any malnutrition you incur from following recommendations from this program. These values are approximate values that I googled.
