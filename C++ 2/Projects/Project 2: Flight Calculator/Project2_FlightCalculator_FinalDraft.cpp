@@ -70,7 +70,7 @@ vector<Location> assign(){
     p10.lon = -85.683029;
     p10.lat = 30.193626;
 
-    // Here the vector is created and has all the objects pushed into it
+// Here the vector is created and has all the objects pushed into it
     vector<Location> locations;
     locations.push_back(p1);
     locations.push_back(p2);
