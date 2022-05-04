@@ -1,26 +1,21 @@
 = Overview
 
-In this project you will be creating an application to compute the amount of time it takes an airplane to fly from one GPS location to another. 
-
-== Required Materials
-
-    Laptop with Internet Connection
-    AWS Account with Cloud9 instance configured
+This Flight Calculator computes the amount of time it takes an airplane to fly from one GPS location to another of the user's chosing. 
 
 == Description
 
-The program will begin by greeting the user with a quick description of the application's function and then presenting the user with an enumerated list of options locations with GPS coordinates in latitude, longitude format in the following fashion:
+This program begins by requesting the user to choose a GPS location from an enumerated list of options presented in coordinates of latitude and longitude (similar to the format below)
 
     Miami Beach, FL, USA    25.793449    -80.139198
     Fargo, ND, USA    46.877186    -96.789803
     Idaho City, ID     43.828850    -115.837860
     ... 
 
-You can find more lat/long GPS locations link:https://www.latlong.net/category/cities-236-15.html.adoc[here^].
+More lat/long GPS locations can be found link:https://www.latlong.net/category/cities-236-15.html.adoc[here^].
 
-The program will then prompt the user to select a departure location by entering in the enumerated value associated with the desired location. The same list will be presented again with the exclusion of the previously selected location to allow the user to select a destination (However, there should not be a missing number from the list. For example, given the sample list above, if the departure was Miami, selection number 1, then when the list is presented again, Fargo should be listed as item 1.)
+The program will then prompt the user to select a departure location by entering in the enumerated value associated with the desired location. The same list will be presented again with the exclusion of the previously selected location to allow the user to select a destination.
 
-Once the user has selected both a departure and a destination location, we will compute the distance to both of those locations. This distance cannot be computed using typical Euclidean distance between two points, as we are dealing with points on the surface of a sphere. This will require us to use the Haversine formula to calculate distance across the surface of the sphere. link:https://en.wikipedia.org/wiki/Haversine_formula.adoc[The Haversine formula^] appears as follows:
+Once the user has selected both a departure and a destination location, the distance to both locations will be computed. This distance cannot be computed using typical Euclidean distance between two points, as we are dealing with points on the surface of a sphere. Flight calculation requires use of the Haversine formula to calculate distance across the surface of the sphere. link:https://en.wikipedia.org/wiki/Haversine_formula.adoc[The Haversine formula^] appears as follows:
 
 Untitled-3.png
 
@@ -33,26 +28,7 @@ where:
 
 The radius of the earth is approximately 3,958.8 mi.
 
-Once you have computed the distance between the two points, you can then approximate the speed of the plane to find the average flight time to get between the two points. The average passenger jet flies at a speed of somewhere between around 460-575 mph. Choose a value in this range to represent the speed of the jet and calculate the approximate time to fly between the two selected points.
-
-== Requirements
-
-   * The code should be well formatted with proper indentation, variable names, and function structure.
-   * The user should be provided with a list of at least 10 lat/long formatted locations.
-   * The user input should not crash the program when options other than the numbers presented in the lists are entered.
-   Instead, the user should be prompted to choose again from the selection.
-   * The haversine formula should be placed into its own separate function. The function should be structured as follows:
-   * double haversine(double lat1, double long1, double lat2, double long2, double radius);
-   * Where the value being returned is the haversine distance in miles between the two latitude/longitude points passed to the function
-   (lat1/long1, lat2,long2).
-   * The flight time calculation should be functionalized as well. Create a function called
-   * double getFlightTime(double lat1, double long1, double lat2, double long2);
-    Where the value returned is the flight time in hours.
-   * Your code should not include any "magic numbers". That means no line of code includes a hardcoded values
-   (with the exception of the 1's and 2's in the haversine formula). Any numbers used in your calculations should
-   be associated with a const variable or a #define macro.
-   * The program should behave as described in the "description" section above
-
+Once the distance between two points has been computed, the average flight time is calculated based off a general plane speed of 525 mph (the average passenger jet flies at a speed of somewhere between around 460-575 mph).
 
 == Notes and Tips
 
