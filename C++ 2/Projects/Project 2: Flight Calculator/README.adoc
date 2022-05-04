@@ -65,3 +65,5 @@ Once you have computed the distance between the two points, you can then approxi
    * You might not have heard of a "magic number" yet, but we will discuss them in class. For a great
     explanation on what they are and how to deal with them in C++, check out this    link:https://dev.to/10xlearner/magic-numbers-and-how-to-deal-with-them-in-c-2jbn.adoc[article^]
 
+points off*** -3 The destination selection should re-index 1-9 after departure
+selected... no executable submitted
