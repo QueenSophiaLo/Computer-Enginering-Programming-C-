@@ -1,4 +1,6 @@
-= Overview
+= Project 5: Bubble Sort
+
+== Overview
 
 In this project a function capable of performing the bubble sort algorithm will be created to sort the contents of an array from largest to smallest.
 
