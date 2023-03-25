@@ -1,1 +1,25 @@
-hi
+= Overview
+
+In this project a function capable of performing the bubble sort algorithm will be created to sort the contents of an array from largest to smallest.
+
+== Background
+
+Sorting data is a very common application in C++ programs. It often aids us in creating more efficient search algorithms, or just aid with displaying information to a user. A basic method for sorting data is the "bubble sort" technique. Bubble sort will iterate through an array of values, compare adjacent indices, and swap them depending on the order in which the data is to be sorted (largest to smallest, or vice versa).
+
+bubblesort1.png
+
+In the image above, if we were sorting the array from largest to smallest, we would compare the first index (0) with the next index (1). If the value in 0 is less than the value at 1, we then swap the numbers. This process is repeated for each index. After a single pass, each larger number will have "bubbled" up one index. We then have to iterate through each element N times, where N is the number of elements in the array, to ensure that all values are properly sorted. The example below demonstrates this entire process for a bubble sort algorithm which sorts from smallest to largest. Note that this example only performs three passes, as the array is fully sorted after three. For a five element array, it is necessary to iterate five times if you are blindly following the process to ensure that any combination/ordering of initial values are fully sorted.
+
+bubblesort2.png
+
+A good resource for learning about bubble sorting can be found link:https://www.geeksforgeeks.org/bubble-sort/[here]
+
+== Description
+
+In this project you will be creating a function that utilizes the pointer syntax to pass an array to a function which will perform the bubble sort algorithm on the data contained within. 
+
+The function will have the following prototype:
+
+`void bubbleSort(int* a, int size);`
+
+This function returns nothing, but sorts the integer array pointed to by "a". The integer size defines how many elements are contained within the array. The bubble sort algorithm implemented within should sort the items in the array from smallest to largest.
