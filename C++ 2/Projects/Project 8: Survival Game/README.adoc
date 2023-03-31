@@ -1,1 +1,23 @@
-hello :)
+= Project 8: Survival Game
+
+== Program Description
+
+In this program, we will be creating a "survival" game where the user controls a character wandering through a world searching for food and water while trying to avoid danger. The world will be represented by a polymorphic 2d array where each element contains a pointer to a "land" base class. The land base class will be a pure virtual class which will provide an interface for various derived land types, such as a forest, desert, lake, etc. The user will be represented by a player class which tracks the player's position within the world and levels of thirst and hunger.
+
+== Requirements
+
+=== Class Descriptions
+The map will be composed of pointers to the land base class. The map will be represented by a 20 x 20 2d array of land pointers. Each land type will be randomly assigned to each element in the map.
+The land class will serve an interface class which will provide the following virtual functions:
+
+    virtual string getDescription() = 0;
+    
+    virtual string visit(Player &p) = 0;
+    
+Where the "Player" parameter passed on visit is the class that represents the user player character. The visit function will be used to make modifications to the player's stats (hunger, thirst, health) when the player visits that location. The modifications that occur will be dependent on the derived land class (e.g., you replenish thirst by visiting a lake).
+
+The classes that derive from the land class should provide implementations of the virtual functions relevant to the type of location being described by the class. For example, if the derived land is a forest, the short description should return a string which describes the forest and the visit function could do something such as restore the player's health by foraging for berries.
+
+The player class should track the user's stats: hunger, thirst, and health. The player class should also track the user's current position within the map using an x,y coordinate frame. The player's hunger and thirst stat should be reduced by one each turn, and if any reach 0 or below, the player's health should then be decremented. The game will end when the player reaches 0 health.
+
+Each turn of the game will prompt the user to choose from one of four directions in which to move: north, east, south, and west. Once the user makes the decision, the player's x,y position should be moved accordingly to the choice, and the visit function for the new position within the map be called.
