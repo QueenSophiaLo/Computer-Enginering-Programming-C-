@@ -17,7 +17,7 @@ The program will then prompt the user to select a departure location by entering
 
 Once the user has selected both a departure and a destination location, the distance to both locations will be computed. This distance cannot be computed using typical Euclidean distance between two points, as we are dealing with points on the surface of a sphere. Flight calculation requires use of the Haversine formula to calculate distance across the surface of the sphere. link:https://en.wikipedia.org/wiki/Haversine_formula.adoc[The Haversine formula^] appears as follows:
 
-![Haversine](https://github.com/QueenSophiaLo/Computer-Enginering-Programming-C-/blob/main/C%2B%2B%202/images/Haversine_formula.png)
+image::https://github.com/QueenSophiaLo/Computer-Enginering-Programming-C-/blob/main/C%2B%2B%202/images/Haversine_formula.png[Haversine]
 
 where:
 
